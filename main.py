@@ -23,3 +23,8 @@ X,Y = datasets.load_nonlinear_example1()
 ex_X = datasets.polynomial3_features(X)
 print(ex_X)
 print(Y)
+
+import importlib
+importlib.reload(regression)
+model = regression.RidgeRegression()
+print(model.alpha)
